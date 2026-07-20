@@ -1,0 +1,12 @@
+{
+  "name": "ashcroft-furniture",
+  "version": "1.0.0",
+  "description": "Ashcroft & Co. — heirloom oak furniture site",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": "20.x" },
+  "dependencies": {
+    "express": "^4.19.2",
+    "compression": "^1.7.4"
+  }
+}

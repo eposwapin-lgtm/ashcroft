@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Handcrafted solid oak furniture, built in Asheville, North Carolina. Timeless pieces designed to live with you for generations.">
+<meta property="og:title" content="Ashcroft &amp; Co. — Heirloom Oak Furniture, Made in North Carolina">
+<meta property="og:description" content="Handcrafted solid oak furniture, built in Asheville, North Carolina. Timeless pieces designed to live with you for generations.">
+<meta name="robots" content="index, follow">
+<title>Ashcroft &amp; Co. — Heirloom Oak Furniture, Made in North Carolina</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--primary:#3d5a3a;--accent:#c89b3c;--text:#1c211b;--muted:#6b7268;--surface:#fbfaf6;--warm:#f0ede3;--border:#e0ddd0;--r:14px}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;color:var(--text);line-height:1.6;background:var(--surface);-webkit-font-smoothing:antialiased}
+.page-wrap{display:flex;min-height:100vh}
+.img-panel{position:sticky;top:0;width:44%;flex-shrink:0;height:100vh;overflow:hidden}
+.img-panel img{width:100%;height:100%;object-fit:cover;display:block}
+.img-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.5) 0%,rgba(0,0,0,.08) 55%,transparent 100%)}
+.img-caption{position:absolute;bottom:2rem;left:2rem;right:2rem}
+.img-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.15);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:.45rem 1.1rem;font-size:.78rem;font-weight:700;color:#fff;letter-spacing:.04em;text-transform:uppercase}
+.img-brand{margin-top:.75rem;font-size:1.5rem;font-weight:900;color:#fff;letter-spacing:-.04em;line-height:1.1;text-shadow:0 2px 12px rgba(0,0,0,.3)}
+.img-stars{color:#fbbf24;font-size:1rem;margin-top:.4rem;text-shadow:0 1px 4px rgba(0,0,0,.4)}
+.scroll-panel{flex:1;overflow:hidden;background:var(--surface)}
+nav{background:var(--surface);border-bottom:1px solid var(--border);padding:0 2rem 0 2.5rem;height:64px;display:flex;align-items:center;justify-content:space-between;gap:1rem;position:sticky;top:0;z-index:100}
+.nav-logo{font-size:1.05rem;font-weight:900;color:var(--text);text-decoration:none;letter-spacing:-.03em}
+.nav-logo em{font-style:normal;color:var(--primary)}
+.nav-links{display:flex;gap:.15rem}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.85rem;font-weight:500;padding:.35rem .65rem;border-radius:8px;transition:all .15s}
+.nav-links a:hover{color:var(--text);background:var(--warm)}
+.nav-cta{background:var(--primary);color:#fff;padding:.45rem 1rem;border-radius:999px;text-decoration:none;font-size:.85rem;font-weight:700;white-space:nowrap;transition:all .15s;display:flex;align-items:center;gap:.4rem}
+.nav-cta:hover{opacity:.88;transform:translateY(-1px)}
+.btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--primary);color:#fff;padding:.85rem 1.75rem;border-radius:999px;text-decoration:none;font-size:.97rem;font-weight:700;transition:all .2s;box-shadow:0 4px 20px rgba(61,90,58,.3);cursor:pointer;border:none}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(61,90,58,.4)}
+.btn-outline{background:transparent;color:var(--text);box-shadow:none;border:1.5px solid var(--border)}
+.btn-outline:hover{background:var(--warm);box-shadow:none}
+.btn-arrow{flex-shrink:0;transition:transform .2s}
+.btn:hover .btn-arrow{transform:translateX(3px)}
+.hero-block{padding:3.5rem 2.5rem 3rem}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:.5rem;background:rgba(61,90,58,.1);color:var(--primary);border-radius:999px;padding:.3rem .9rem;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:1.5rem}
+.hero-block h1{font-size:clamp(1.9rem,4vw,3rem);font-weight:900;color:var(--text);line-height:1.06;letter-spacing:-.04em;margin-bottom:1rem}
+.hero-block h1 u{text-decoration:none;border-bottom:4px solid var(--accent);padding-bottom:1px}
+.hero-sub{font-size:1.05rem;color:var(--muted);margin-bottom:2rem;line-height:1.7;max-width:480px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;margin-bottom:2.5rem}
+.trust-row{display:flex;flex-wrap:wrap;gap:1.5rem;align-items:center;padding-top:2rem;border-top:1px solid var(--border)}
+.trust-item{display:flex;align-items:center;gap:.4rem;font-size:.82rem;font-weight:600;color:var(--muted)}
+.trust-item svg{color:var(--accent)}
+.divider{height:1px;background:var(--border);margin:0 2.5rem}
+.features-block{padding:3rem 2.5rem}
+.block-label{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--primary);opacity:.8;margin-bottom:.4rem}
+.block-title{font-size:clamp(1.4rem,3vw,2rem);font-weight:900;letter-spacing:-.04em;color:var(--text);margin-bottom:.7rem;line-height:1.15}
+.block-sub{font-size:.97rem;color:var(--muted);margin-bottom:2rem;line-height:1.65}
+.feats-list{display:flex;flex-direction:column;gap:1rem}
+.feat-row{display:flex;align-items:flex-start;gap:1rem;padding:1.1rem 1.25rem;background:var(--warm);border:1px solid var(--border);border-radius:var(--r);transition:transform .2s,box-shadow .2s}
+.feat-row:hover{transform:translateX(4px);box-shadow:0 4px 16px rgba(61,90,58,.08)}
+.feat-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;background:rgba(61,90,58,.1);color:var(--primary)}
+.feat-text{font-size:.95rem;color:#2f3a2d;font-weight:500;line-height:1.6;padding-top:.2rem}
+.feat-text strong{color:var(--text);font-weight:700}
+.about-block{padding:3rem 2.5rem;background:var(--warm)}
+.about-img-wrap{border-radius:20px;overflow:hidden;aspect-ratio:16/9;margin-bottom:2rem;box-shadow:0 12px 40px rgba(0,0,0,.1)}
+.about-img-wrap img{width:100%;height:100%;object-fit:cover;display:block}
+.about-stag{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--primary);opacity:.8;margin-bottom:.4rem}
+.about-block h2{font-size:clamp(1.3rem,2.5vw,1.8rem);font-weight:900;letter-spacing:-.04em;color:var(--text);margin-bottom:1rem;line-height:1.15}
+.about-block p{font-size:.97rem;color:#3b463a;line-height:1.85;margin-bottom:1rem}
+.about-pills{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.5rem 0 2rem}
+.about-pill{display:flex;align-items:center;gap:.4rem;padding:.35rem .85rem;border-radius:999px;background:rgba(61,90,58,.1);color:var(--primary);font-size:.8rem;font-weight:700}
+.contact-block{padding:3rem 2.5rem}
+.contact-block h2{font-size:clamp(1.3rem,2.5vw,1.8rem);font-weight:900;letter-spacing:-.04em;color:var(--text);margin-bottom:.75rem;line-height:1.15}
+.contact-block p{font-size:.97rem;color:var(--muted);line-height:1.7;margin-bottom:1.75rem}
+.contact-items{display:flex;flex-direction:column;gap:.9rem;margin-bottom:2rem}
+.contact-item{display:flex;align-items:flex-start;gap:.85rem}
+.contact-icon{width:38px;height:38px;border-radius:10px;background:rgba(61,90,58,.08);border:1px solid rgba(61,90,58,.12);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--primary)}
+.contact-item strong{display:block;font-size:.72rem;font-weight:700;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-bottom:.15rem}
+.contact-item a,.contact-item span{font-size:.95rem;color:var(--text);font-weight:500;text-decoration:none}
+.contact-item a:hover{color:var(--primary)}
+.cta-block{background:var(--primary);padding:3.5rem 2.5rem;text-align:center;position:relative;overflow:hidden}
+.cta-block::before{content:'';position:absolute;top:-60%;right:-20%;width:400px;height:400px;border-radius:50%;background:rgba(255,255,255,.06);pointer-events:none}
+.cta-block h2{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:900;color:#fff;letter-spacing:-.04em;margin-bottom:.7rem;line-height:1.1;position:relative}
+.cta-block p{font-size:.97rem;color:rgba(255,255,255,.78);margin-bottom:2rem;line-height:1.65;position:relative}
+.cta-block .btn{background:#fff;color:var(--primary);box-shadow:0 6px 24px rgba(0,0,0,.2);position:relative}
+.cta-note{font-size:.76rem;color:rgba(255,255,255,.45);margin-top:1rem;position:relative}
+footer{background:#141a13;color:#9aa498;padding:2.5rem 2.5rem 2rem;font-size:.875rem}
+.footer-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1.75rem;padding-bottom:1.75rem;border-bottom:1px solid #2a3328}
+.footer-logo{font-size:1rem;font-weight:900;color:#f0ede3;text-decoration:none;letter-spacing:-.03em;display:block;margin-bottom:.5rem}
+.footer-logo em{font-style:normal;color:var(--accent)}
+.footer-brand p{max-width:220px;font-size:.8rem;color:#717a6f;line-height:1.6}
+.footer-col h4{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#535c52;margin-bottom:.6rem}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.4rem}
+.footer-col a{color:#717a6f;text-decoration:none;font-size:.83rem;transition:color .15s;cursor:pointer}
+.footer-col a:hover{color:#f0ede3}
+.footer-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem;font-size:.78rem;color:#4a5249}
+.reviews-section{padding:2.5rem 2.5rem;background:var(--warm)}
+.reviews-heading{font-size:1.2rem;font-weight:900;letter-spacing:-.03em;margin-bottom:.3rem;color:var(--text)}
+.reviews-sub{color:var(--muted);margin-bottom:1.5rem;font-size:.88rem}
+.reviews-grid{display:grid;grid-template-columns:1fr;gap:1rem}
+.review-card{background:#fff;border-radius:12px;padding:1.4rem;border:1px solid var(--border);display:flex;flex-direction:column;gap:.75rem;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.review-stars{color:#c89b3c;font-size:.9rem;letter-spacing:.1em}
+.review-text{font-size:.91rem;line-height:1.7;color:var(--text);flex:1;font-style:italic}
+.review-author{display:flex;align-items:center;gap:.65rem;border-top:1px solid var(--border);padding-top:.75rem;margin-top:auto}
+.review-avatar{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.86rem;color:#fff;flex-shrink:0;background:var(--primary)}
+.review-name{font-weight:700;font-size:.86rem;color:var(--text)}
+.review-role{font-size:.76rem;color:var(--muted);margin-top:.1rem}
+@media(max-width:820px){
+  .page-wrap{flex-direction:column}
+  .img-panel{position:relative;width:100%;height:55vw;min-height:240px;max-height:380px}
+  .scroll-panel{width:100%}
+  nav{padding:0 1.25rem}
+  .hero-block,.features-block,.about-block,.contact-block,.cta-block,.reviews-section{padding-left:1.25rem;padding-right:1.25rem}
+  .divider{margin:0 1.25rem}
+  footer{padding-left:1.25rem;padding-right:1.25rem}
+  .nav-links{display:none}
+}
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:1000;align-items:center;justify-content:center;padding:1.5rem;backdrop-filter:blur(4px)}
+.modal-overlay.open{display:flex}
+.modal-box{background:#fff;border-radius:16px;max-width:760px;width:100%;max-height:85vh;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 24px 64px rgba(0,0,0,.2)}
+.modal-head{padding:1.25rem 1.75rem;border-bottom:1px solid #e2e8f0;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.modal-head strong{font-size:1.05rem;font-weight:700;color:#0f172a}
+.modal-close{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;width:34px;height:34px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:#64748b}
+.modal-body{overflow-y:auto;padding:1.75rem;line-height:1.8;color:#334155;font-size:.93rem}
+.modal-body h2{font-size:1.35rem;font-weight:800;color:#0f172a;margin-bottom:.5rem;margin-top:1.5rem}
+.modal-body h2:first-child{margin-top:0}
+.modal-body h3{font-size:1rem;font-weight:700;color:#0f172a;margin:1.25rem 0 .4rem}
+.modal-body p,.modal-body ul{margin-bottom:.75rem}
+.modal-body ul{margin-left:1.25rem}
+</style>
+</head>
+<body>
+<div class="page-wrap">
+  <div class="img-panel">
+    <img src="hero.jpg" alt="Handcrafted oak interior by Ashcroft & Co." loading="eager" decoding="async">
+    <div class="img-overlay"></div>
+    <div class="img-caption">
+      <div class="img-badge">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="#c89b3c"><circle cx="5" cy="5" r="5"/></svg>
+        Ashcroft & Co. · Asheville, NC
+      </div>
+      <div class="img-brand">Heirloom Oak Furniture, Built to Outlast Trends</div>
+      <div class="img-stars">&#9733;&#9733;&#9733;&#9733;&#9733; 4.9 / 1,284 reviews</div>
+    </div>
+  </div>
+  <div class="scroll-panel">
+    <nav>
+      <a class="nav-logo" href="#"><em>Ash</em>croft</a>
+      <div class="nav-links">
+        <a href="#features">Craft</a>
+        <a href="#about">Studio</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="nav-cta" href="#contact">Book Consultation<svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </nav>
+    <div class="hero-block" id="home">
+      <div class="hero-eyebrow">
+        <svg width="8" height="8" viewBox="0 0 8 8" fill="#c89b3c"><circle cx="4" cy="4" r="4"/></svg>
+        Made-to-order in North Carolina
+      </div>
+      <h1>Furniture you'll <u>pass down</u>, not throw away.</h1>
+      <p class="hero-sub">Ashcroft &amp; Co. builds solid white oak, walnut, and cherry pieces by hand in our Asheville workshop — finished with natural oils and shipped white-glove across the United States.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#contact">Start Your Build<svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a class="btn btn-outline" href="#about">Our Workshop<svg class="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+      <div class="trust-row">
+        <div class="trust-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>FSC-certified hardwoods</div>
+        <div class="trust-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Lifetime joinery warranty</div>
+        <div class="trust-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="#c89b3c" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>4.9 average rating</div>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="features-block" id="features">
+      <p class="block-label">Why Ashcroft</p>
+      <h2 class="block-title">Old-world joinery, modern lead times.</h2>
+      <p class="block-sub">Custom hardwood used to mean a year-long wait and a five-figure quote. We re-engineered our workshop so you can configure, approve, and receive a heirloom-grade piece in 4–6 weeks.</p>
+      <div class="feats-list">
+        <div class="feat-row">
+          <div class="feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <p class="feat-text"><strong>Mortise-and-tenon joinery.</strong> No staples, no MDF, no plastic — every joint is cut, fitted, and glued by a craftsperson whose name is signed on the underside of your piece.</p>
+        </div>
+        <div class="feat-row">
+          <div class="feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <p class="feat-text"><strong>Northeast American hardwood.</strong> White oak from the Blue Ridge, walnut from Tennessee, cherry from Kentucky — all responsibly harvested and kiln-dried on site.</p>
+        </div>
+        <div class="feat-row">
+          <div class="feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <p class="feat-text"><strong>4–6 week delivery.</strong> Configure size, wood, and finish online, lock in your slot, and we'll deliver and place it in your room with two-person white-glove service.</p>
+        </div>
+        <div class="feat-row">
+          <div class="feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg></div>
+          <p class="feat-text"><strong>Hand-rubbed natural finishes.</strong> Plant-based hardwax oils, zero VOCs — safe for kids, pets, and the people who built it.</p>
+        </div>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="about-block" id="about">
+      <div class="about-img-wrap">
+        <img src="about.jpg" alt="Inside the Ashcroft workshop" loading="lazy" decoding="async">
+      </div>
+      <p class="about-stag">Our Studio</p>
+      <h2>A small workshop on Riverside Drive.</h2>
+      <p>Ashcroft &amp; Co. started in 2017 when two cabinetmakers — Henry Ashcroft and Clara Boone — got tired of seeing beautiful Appalachian oak disappear into disposable furniture. They opened a 4,200 sq ft shop on Riverside Drive with one rule: nothing leaves the floor unless it can be repaired by a grandchild.</p>
+      <p>Nine years and 8,600 pieces later, that rule still holds. Every dining table, bed frame, sideboard, and bench is signed, dated, and registered to its original owner so we can service it for life.</p>
+      <div class="about-pills">
+        <div class="about-pill"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Family-owned</div>
+        <div class="about-pill"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Carolina-built</div>
+        <div class="about-pill"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Lifetime warranty</div>
+      </div>
+      <a class="btn" href="#contact">Visit the Workshop<svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+    <div class="divider"></div>
+    <section class="reviews-section" id="reviews">
+      <h2 class="reviews-heading">What our customers say</h2>
+      <p class="reviews-sub">A few notes from the people now living with our furniture.</p>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"I spec Ashcroft &amp; Co. for nearly every residential project now. The fit-and-finish is on par with shops charging twice as much, and their lead times actually hold."</p>
+          <div class="review-author">
+            <div class="review-avatar">E</div>
+            <div><div class="review-name">Emily H.</div><div class="review-role">Interior Designer · Charleston, SC</div></div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Our white oak dining table arrived in five weeks, perfectly packed. Two years of family dinners later, it's only gotten more beautiful. Worth every dollar."</p>
+          <div class="review-author">
+            <div class="review-avatar">J</div>
+            <div><div class="review-name">James C.</div><div class="review-role">Homeowner · Raleigh, NC</div></div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"The white-glove delivery team set up our king bed frame in under an hour and took every scrap of packaging with them. That's the detail that sold me."</p>
+          <div class="review-author">
+            <div class="review-avatar">N</div>
+            <div><div class="review-name">Nora B.</div><div class="review-role">First-Time Buyer · Atlanta, GA</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="divider"></div>
+    <div class="contact-block" id="contact">
+      <p class="block-label">Get In Touch</p>
+      <h2>Tell us about the piece you have in mind.</h2>
+      <p>Our design team responds within one business day. Visits to the Riverside Drive workshop are by appointment, Tuesday through Saturday.</p>
+      <div class="contact-items">
+        <div class="contact-item"><div class="contact-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.1 1.18 2 2 0 012.11 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6z"/></svg></div><div><strong>Phone</strong><a href="tel:+18285550184">(828) 555-0184</a></div></div>
+        <div class="contact-item"><div class="contact-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><strong>Workshop</strong><span>148 Riverside Drive, Asheville, NC 28801</span></div></div>
+        <div class="contact-item"><div class="contact-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><strong>Email</strong><a href="mailto:hello@ashcroftco.com">hello@ashcroftco.com</a></div></div>
+      </div>
+    </div>
+    <div class="cta-block">
+      <h2>Build something worth keeping.</h2>
+      <p>Configure your piece online, or sit with our designers in Burlington. Either way, we'll make sure it lives in your family for generations.</p>
+      <a class="btn" href="#contact">Start Your Build<svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <p class="cta-note">Free design consultations · No deposit to start</p>
+    </div>
+    <footer>
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="footer-logo" href="#"><em>Ash</em>croft</a>
+          <p>Heirloom oak furniture, handmade in Asheville, North Carolina.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Our Studio</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a onclick="document.getElementById('modal-privacy').classList.add('open')" tabindex="0">Privacy Policy</a></li>
+            <li><a onclick="document.getElementById('modal-terms').classList.add('open')" tabindex="0">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Ashcroft &amp; Co. Furniture All rights reserved.</span>
+        <span>Made in Asheville, NC</span>
+      </div>
+    </footer>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-privacy" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="modal-box">
+    <div class="modal-head"><strong>Privacy Policy</strong><button class="modal-close" onclick="document.getElementById('modal-privacy').classList.remove('open')">&times;</button></div>
+    <div class="modal-body">
+      <h2>Privacy Policy</h2>
+      <p><strong>Last updated: January 2026</strong></p>
+      <p>Ashcroft &amp; Co. Furniture ("we", "us") respects your privacy. This policy explains what we collect, how we use it, and the rights you have under the CCPA and similar U.S. state laws.</p>
+      <h3>Information we collect</h3>
+      <p>Contact details you submit (name, email, phone, shipping address), order history, and standard analytics data (IP, browser, pages viewed).</p>
+      <h3>How we use it</h3>
+      <ul><li>To fulfill and ship your order</li><li>To respond to design-consultation requests</li><li>To send occasional product updates (opt-in only)</li><li>To improve site performance via Google Analytics</li></ul>
+      <h3>Sharing</h3>
+      <p>We never sell your personal data. We share only what is required with shipping carriers (UPS, FedEx Freight) and our payment processor (Stripe).</p>
+      <h3>Your rights</h3>
+      <p>California residents may request access, correction, or deletion of personal data at any time by emailing privacy@ashcroftco.com.</p>
+      <h3>Contact</h3>
+      <p>Ashcroft &amp; Co. Furniture<br>148 Riverside Drive, Asheville, NC 28801<br>privacy@ashcroftco.com</p>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-terms" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="modal-box">
+    <div class="modal-head"><strong>Terms of Service</strong><button class="modal-close" onclick="document.getElementById('modal-terms').classList.remove('open')">&times;</button></div>
+    <div class="modal-body">
+      <h2>Terms of Service</h2>
+      <p><strong>Last updated: January 2026</strong></p>
+      <p>By placing an order or using this website, you agree to these terms.</p>
+      <h3>Orders & payments</h3>
+      <p>All prices are in USD. Custom orders require a 30% deposit and a final balance due before shipment. Production starts after deposit clears.</p>
+      <h3>Shipping</h3>
+      <p>White-glove delivery is included on all furniture orders in the contiguous United States. Lead times of 4–6 weeks are estimates and may vary by wood availability.</p>
+      <h3>Warranty & returns</h3>
+      <p>Ashcroft pieces carry a lifetime warranty against joinery failure. Made-to-order items may be returned within 14 days of delivery for a refund less return freight. Standing pieces ship final-sale.</p>
+      <h3>Liability</h3>
+      <p>Our liability is limited to the purchase price of the affected item. We are not responsible for indirect or consequential damages.</p>
+      <h3>Contact</h3>
+      <p>Ashcroft &amp; Co. Furniture<br>148 Riverside Drive, Asheville, NC 28801<br>hello@ashcroftco.com</p>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.modal-overlay.open').forEach(m=>m.classList.remove('open'))});
+</script>
+</body>
+</html>
